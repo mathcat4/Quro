@@ -1,0 +1,28 @@
+summary {
+  display: list-item;
+}
+body {
+  background-color: #2f2f2f;
+}
+.summary {
+  color: white;
+  font-size: 32px;
+  font-family: "Minefont";
+  font-weight: lighter;
+  padding: 5px;
+}
+
+.text {
+  color: white;
+}
+
+#heading {
+  color: white;
+  font-family: "Minefont";
+}
+
+.input-box {
+  background-color: gray;
+  width: 100%;
+  display: flex;
+}
