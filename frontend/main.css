@@ -16,10 +16,27 @@ summary {
 #heading {
   color: white;
   font-family: "Cinzel";
-  cursor: pointer;
+  font-size: 64px;
+  transition: 0.5s;
+  padding: 30px;
 }
 
-#heading:hover {
+#togglebtn {
+  cursor: pointer;
+  font-size: 64px;
+  color: white;
+  transition: 0.5s;
+}
+
+.icons {
+  color: white;
+  font-size: 54px;
+  transition: 0.5s;
+  padding: 20px;
+}
+
+.icons:hover,
+#togglebtn:hover {
   cursor: pointer;
   color: #dddddd;
 }
@@ -87,5 +104,19 @@ summary {
   }
   #sidebar a {
     font-size: 18px;
+  }
+  #heading,
+  #togglebtn,
+  .icons {
+    font-size: 200%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #heading,
+  #togglebtn,
+  .icons {
+    font-size: 200%;
+    padding: 7px;
   }
 }
