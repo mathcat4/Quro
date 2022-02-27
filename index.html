@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta id="meta" http-equiv="refresh" content="">
+        <script type="text/javascript">
+            switch(window.location.protocol) {
+            case 'http:':
+            case 'https:':
+                href = "frontend"
+                break;
+            case 'file:':
+                href = "frontend/index.html"
+                break;
+            default: 
+                href = "frontend/index.html"
+            }
+            document.getElementById("meta").content="0; url="+href
+            window.location.href = href
+        </script>
+        <title>Curo Online Interpreter</title>
+    </head>
+    <body>
+        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
+        If you are not redirected automatically, follow this <a href=frontend/index.html'>link to visit the online interpreter</a>.
+    </body>
+</html>
