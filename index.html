@@ -1,102 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="An online interpreter for the golfing language curo">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An online interpreter for the golfing language curo">
 
-	<title>Curo Online Interpreter</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="frontend/main.css">
+    <title>Curo Online Interpreter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="frontend/main.css">
 </head>
-	<body>
-		<!-- CSS -->
-		<style>
-			@font-face {
-				font-family: Cinzel;
-				src: url(data/Cinzel_Family/Cinzel_Decorative/CinzelDecorative-Regular.ttf);
-				font-display: swap;
-			}
-			
-			@font-face {
-				font-family: raleway;
-				src: url(data/raleway/Raleway-Thin.ttf);
-				font-display: swap;
-			}
-			
-			@font-face {
-				font-family: MineFont;
-				src: url(data/mineFont.ttf);
-				font-display: swap;
-			}
-			</style>
+    <body>
+        <!-- CSS -->
+        <style>
+            @font-face {
+                font-family: Cinzel;
+                src: url(data/Cinzel_Family/Cinzel_Decorative/CinzelDecorative-Regular.ttf);
+                font-display: swap;
+            }
+            
+            @font-face {
+                font-family: raleway;
+                src: url(data/raleway/Raleway-Thin.ttf);
+                font-display: swap;
+            }
+            
+            @font-face {
+                font-family: MineFont;
+                src: url(data/mineFont.ttf);
+                font-display: swap;
+            }
+            </style>
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-		<!-- Script tags -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+        <!-- Script tags -->
 
-		<script>
-			function resizeCodeBox(id) {
-				// Resize the code box with the given id
-				var element = document.getElementById(id);
-				element.style.height = ""
-				element.style.height = element.scrollHeight + 3 + "px"
-			}
+        <script>
+            function resizeCodeBox(id) {
+                // Resize the code box with the given id
+                var element = document.getElementById(id);
+                element.style.height = ""
+                element.style.height = element.scrollHeight + 3 + "px"
+            }
 
-			function toggleNav() {
-				if (document.getElementById("sidebar").style.state == "open") {
-					document.getElementById("sidebar").style.width = "0px";
-					document.getElementById("main").style.marginLeft = "0px";
-					document.getElementById("sidebar").style.state = "close";
-				} else {
-					document.getElementById("sidebar").style.width = "250px";
-					document.getElementById("main").style.marginLeft = "250px";
-					document.getElementById("sidebar").style.state = "open";
-				}
-				
-			}
+            function toggleNav() {
+                if (document.getElementById("sidebar").style.state == "open") {
+                    document.getElementById("sidebar").style.width = "0px";
+                    document.getElementById("main").style.marginLeft = "0px";
+                    document.getElementById("sidebar").style.state = "close";
+                } else {
+                    document.getElementById("sidebar").style.width = "250px";
+                    document.getElementById("main").style.marginLeft = "250px";
+                    document.getElementById("sidebar").style.state = "open";
+                }
+                
+            }
 
-		</script>
-		<script src="frontend/main.js"></script>
+        </script>
+        <script src="frontend/main.js"></script>
 
-		<!-- Main part -->
+        <!-- Main part -->
 
-		<div id="sidebar">
-			<span class="closebtn" onclick="toggleNav()">&times;</span>
-			<a href="https://github.com/SE-Nitro/Curo">GitHub <i class="bi-github"></i></a>
-			<a href="#">CGCC Format <i class="bi-trophy-fill"></i></a>
-			<a href="#">CMC Format <i class="bi-chat-right-dots-fill"></i></a>
-			<a href="#">Contact <i class="bi-envelope-fill"></i></a>
-		</div>
-		<div id="main">
-			<div class="container-fluid">
-				<span class="top" id="togglebtn" onclick="toggleNav()">&#9776;</span>
-				<span class="top" id="heading">Curo</span>
-				<i title="Run Program" class="bi-play-fill icons"></i>
-				<i title="Generate link" class="bi-link icons"></i>
-				<i title="Clear everything" class="bi-x-circle-fill icons"></i>
-				<i title="Reload page" class="bi-arrow-clockwise icons"></i>
+        <div id="sidebar">
+            <span class="closebtn" onclick="toggleNav()">&times;</span>
+            <a href="https://github.com/SE-Nitro/Curo">GitHub <i class="bi-github"></i></a>
+            <a href="#">CGCC Format <i class="bi-trophy-fill"></i></a>
+            <a href="#">CMC Format <i class="bi-chat-right-dots-fill"></i></a>
+            <a href="#">Contact <i class="bi-envelope-fill"></i></a>
+        </div>
+        <div id="main">
+            <div class="container-fluid">
+                <span class="top" id="togglebtn" onclick="toggleNav()">&#9776;</span>
+                <span class="top" id="heading">Curo</span>
+                <i title="Run Program" class="bi-play-fill icons"></i>
+                <i title="Generate link" class="bi-link icons"></i>
+                <i title="Clear everything" class="bi-x-circle-fill icons"></i>
+                <i title="Reload page" class="bi-arrow-clockwise icons"></i>
 
-				<details>
-					<summary class="summary">Header</summary>
-					<textarea class="text-box" id="header" label="header" oninput="resizeCodeBox('header')"></textarea>
-				</details>
-				<details open>
-					<summary class="summary">Code</summary>
-					<textarea class="text-box" id="code" label="code" oninput="resizeCodeBox('code')"></textarea>
-				</details>
-				<details>	
-					<summary class="summary">Footer</summary>
-					<textarea class="text-box" id="footer" label="footer" oninput="resizeCodeBox('footer')"></textarea>
-				</details>
-				<details>
-					<summary class="summary">Input</summary>
-					<textarea class="text-box" id="input" label="input" oninput="resizeCodeBox('input')"></textarea>
-				</details>
-				<br>
-				<p class="summary">Output:</p>
-				<input type="text" class="text-box" id="output" label="output" disabled>
-			</div>
-		</div>
+                <details>
+                    <summary class="summary">Header</summary>
+                    <textarea class="text-box" id="header" label="header" oninput="resizeCodeBox('header')"></textarea>
+                </details>
+                <details open>
+                    <summary class="summary">Code</summary>
+                    <textarea class="text-box" id="code" label="code" oninput="resizeCodeBox('code')"></textarea>
+                </details>
+                <details>	
+                    <summary class="summary">Footer</summary>
+                    <textarea class="text-box" id="footer" label="footer" oninput="resizeCodeBox('footer')"></textarea>
+                </details>
+                <details>
+                    <summary class="summary">Input</summary>
+                    <textarea class="text-box" id="input" label="input" oninput="resizeCodeBox('input')"></textarea>
+                </details>
+                <br>
+                <p class="summary">Output:</p>
+                <input type="text" class="text-box" id="output" label="output" disabled>
+            </div>
+        </div>
 
 
 
