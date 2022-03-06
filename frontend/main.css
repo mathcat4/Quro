@@ -42,7 +42,8 @@ summary {
 }
 
 .text-box {
-  background-color: rgb(97, 97, 97);
+  background-color: rgb(118, 118, 118);
+  color: white;
   width: 100%;
   display: flex;
   border: 0;
