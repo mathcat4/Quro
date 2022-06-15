@@ -37,10 +37,8 @@ function tokenize(code) {
         number = "";
       }
     } else {
-      if (current_num) {
-        number += char;
-      } else {
-        number += char;
+      number += char;
+      if (!current_num) {
         current_num = true;
       }
     }
