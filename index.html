@@ -7,7 +7,8 @@
 
     <title>Curo Online Interpreter</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="frontend/main.css">
+    <link rel="stylesheet" type="text/css" href="static/main.css">
+    <link rel="stylesheet" type="text/css" href="static/sidebar.css">
 </head>
     <body>
         <!-- CSS -->
@@ -32,7 +33,8 @@
             </style>
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-        <!-- Script tags -->
+
+        <!-- Scripts -->
 
         <script>
             function resizeCodeBox(id) {
@@ -56,7 +58,8 @@
             }
 
         </script>
-        <script src="frontend/main.js"></script>
+        <script src="curo/main.js"></script>
+        <script src="curo/tokenizer.js"></script>
 
         <!-- Main part -->
 
@@ -71,7 +74,7 @@
             <div class="container-fluid">
                 <span class="top" id="togglebtn" onclick="toggleNav()">&#9776;</span>
                 <span class="top" id="heading">Curo</span>
-                <i title="Run Program" class="bi-play-fill icons"></i>
+                <i title="Run Program" class="bi-play-fill icons" onclick="run()"></i>
                 <i title="Generate link" class="bi-link icons"></i>
                 <i title="Clear everything" class="bi-x-circle-fill icons"></i>
                 <i title="Reload page" class="bi-arrow-clockwise icons"></i>
@@ -79,27 +82,27 @@
                 <details>
                     <summary class="summary">Header</summary>
                     <textarea class="text-box" id="header" oninput="resizeCodeBox('header')"></textarea>
-                    <label for="header">Write header code</label>
+                    <label for="header">Header code</label>
                 </details>
                 <details open>
                     <summary class="summary">Code</summary>
                     <textarea class="text-box" id="code" oninput="resizeCodeBox('code')"></textarea>
-                    <label for="code">Write main code</label>
+                    <label for="code">Main code</label>
                 </details>
                 <details>	
                     <summary class="summary">Footer</summary>
                     <textarea class="text-box" id="footer" oninput="resizeCodeBox('footer')"></textarea>
-                    <label for="footer">Write footer code</label>
+                    <label for="footer">Footer code</label>
                 </details>
                 <details>
                     <summary class="summary">Input</summary>
                     <textarea class="text-box" id="input" oninput="resizeCodeBox('input')"></textarea>
-                    <label for="input">Write input for code</label>
+                    <label for="input">Input code</label>
                 </details>
                 <br>
                 <p class="summary">Output:</p>
-                <input type="text" class="text-box" id="output" disabled>
-                <label for="output">Output for code</label>
+                <textarea class="text-box" id="output" disabled></textarea>
+                <label for="output">Output code</label>
             </div>
         </div>
 

@@ -1,0 +1,99 @@
+body {
+	background-color: #2f2f2f;
+}
+
+#main {
+	transition: margin-left 0.5s;
+	padding: 20px;
+
+}
+
+/*----------------------- Top Part -----------------------*/
+
+#heading {
+	color: white;
+	font-family: "Cinzel";
+	font-size: 64px;
+	transition: 0.5s;
+	padding: 30px;
+}
+
+#togglebtn {
+	cursor: pointer;
+	font-size: 64px;
+	color: white;
+	transition: 0.5s;
+}
+
+.icons {
+	color: white;
+	font-size: 54px;
+	transition: 0.5s;
+	padding: 20px;
+}
+
+
+.icons:hover,
+#togglebtn:hover {
+	cursor: pointer;
+	color: #dddddd;
+}
+
+/*----------------------- Main Part -----------------------*/
+
+summary {
+	display: list-item;
+}
+
+.summary {
+	color: white;
+	font-size: 24px;
+	font-family: "raleway";
+	font-weight: lighter;
+	padding: 5px;
+}
+
+.text-box {
+	background-color: rgb(118, 118, 118);
+	color: white;
+	width: 100%;
+	display: flex;
+	border: 0;
+	box-shadow: none;
+	border-radius: 0px;
+	outline-width: 0;
+	font-size: 15px;
+}
+
+#output {
+	height: 52px;
+}
+
+label {
+	color: white;
+}
+
+/*----------------------- Resizing Stuff -----------------------*/
+
+@media screen and (max-height: 450px) {
+	#sidebar {
+		padding-top: 15px;
+	}
+	#sidebar a {
+		font-size: 18px;
+	}
+	#heading,
+	#togglebtn,
+	.icons {
+		font-size: 200%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#heading,
+	#togglebtn,
+	.icons {
+		font-size: 200%;
+		padding: 7px;
+	}
+}
