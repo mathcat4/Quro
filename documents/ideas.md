@@ -8,34 +8,34 @@ This just a file to note down my ideas.
 - Unics: Either control structures which specify the flow of controls or special (unique) characters
   - E.g.: If structure, while loop, lambda, etc.
 - Items: Every character in the codepage    
-- Sumod: see below
+- Sumods: see below
 
-# Sumod
-- stands for suffixed modifier
+# Sumods
+- stands for suffixed modifiers
 - can be suffixed to every item to change its action
 
 - Example:
   - `-`  -> Subtraction (default)
-  - `-S` -> Remove duplicates
+  - `-@` -> Remove duplicates
   - `L`  -> Lambda
-  - `LS` -> Filter Lambda
+  - `L%` -> Filter Lambda
 
-# If statements
-`1Y"Yeah"]"Nah"]`
+# If-Structure
+`1Y"Yeah"]"Nah`
 ```
-1I"Yeah"]"Nah"]
+1Y"Yeah"]"Nah
 1                Push 1
- I      ]     ]  If statement
+ Y      ]       If statement
   "Yeah"         If true, push "Yeah"
-         "Nah"   If false, push "Nah"
+         "Nah   If false, push "Nah" (Implicitly end string and if structure)
 ```
 
 # Fibonacci
-`λ+cVS]`
+`λ+@VS]`
 ```
-λ+cvS]
-λ    ] Lambda
- \+     Add 2 args
-  @V   Constant [0, 1]
-    S  Generate Infinite Sequence
+λ+]@vS
+λ     Lambda
+ +]     Add 2 args
+   @V   Constant [0, 1]
+     S  Generate Infinite Sequence
 ```
