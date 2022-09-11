@@ -27,7 +27,7 @@ class IsType {
     return elements.includes(char);
   }
   static str_delim(char) {
-    return char == '"';
+    return char == STR_DELIM;
   }
   static unic(char) {
     return unics.includes(char);
@@ -47,17 +47,17 @@ function tokenize(code) {
   for (let char of code) {
     if (!IsType.number(char)) {
       if (char == DEC) {
-        decimal += number + ".";
+        decimal += number + DEC;
 
         current_dec = true;
         current_num = false; // so the next digits get added to `number`
         number = "";
       } else if (current_dec) {
         decimal += number;
-        if (decimal.startsWith(".")) {
+        if (decimal.startsWith(DEC)) {
           decimal = "0" + decimal;
         }
-        if (decimal.endsWith(".")) {
+        if (decimal.endsWith(DEC)) {
           decimal += "5";
         }
 
