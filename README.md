@@ -1,6 +1,6 @@
 # Quro
 
-Coming soon! (as in maybe in two years)
+Yea
 
 ## Checklist
 - [ ] Tokenizer
