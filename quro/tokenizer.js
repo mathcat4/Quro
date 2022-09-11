@@ -15,7 +15,7 @@ Token.prototype.toString = function () {
 
 class TokenType {
   static NUMBER = "number";
-  static CURO = "curo";
+  static QURO = "quro";
   static STR_DELIM = "string";
 }
 
@@ -23,7 +23,7 @@ class IsType {
   static number(char) {
     return !!char.match(/\d/);
   }
-  static curo(char) {
+  static quro(char) {
     return elements.includes(char);
   }
   static str_delim(char) {
@@ -73,8 +73,8 @@ function tokenize(code) {
 
     if (!IsType.str_delim(char) && current_str) {
       string += char;
-    } else if (IsType.curo(char)) {
-      tokens.push(new Token(TokenType.CURO, char));
+    } else if (IsType.quro(char)) {
+      tokens.push(new Token(TokenType.QURO, char));
     } else if (IsType.number(char)) {
       number += char;
       if (!current_num) {

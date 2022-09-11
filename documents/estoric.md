@@ -1,8 +1,12 @@
 This just a file to note down my ideas.
-# Arity classes
-`a+` -> Addition, arity 2 (default)
-`b+` -> Summation, arity 1
-`c+` -> 
+# Quora
+- uses 7-bit character set
+# Classes
+`+a` -> Addition, arity 2 (default)
+`+b` -> Summation, arity 1
+
+Arity classes can have any 
+
 # If statements
 `1I"Yeah"]"Nah"]`
 <code>
